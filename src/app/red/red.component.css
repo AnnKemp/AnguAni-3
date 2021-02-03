@@ -1,9 +1,6 @@
 div{
-    height: 500px;
-    width: 100%;
-    background-color: red;
     padding:10px;
-    
+
     position: relative;
     float:left;
 }
