@@ -1,1 +1,4 @@
-<div><p>red works!</p></div>
+<button (click)="toggle()">click to animate</button>
+<div [@openRed]="isOpen ? 'open' : 'closed'"  class="open-close"><p>red works!</p>
+
+</div>

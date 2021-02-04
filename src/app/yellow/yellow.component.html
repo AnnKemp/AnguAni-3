@@ -1,1 +1,5 @@
-<div><p>yellow works!</p></div>
+
+<button (click)="toggle()">click to animate</button>
+<div [@openYellow]="isOpen ? 'open' : 'closed'"  class="open-close"><p>yellow works!</p>
+
+</div>

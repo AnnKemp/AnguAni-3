@@ -1,6 +1,12 @@
-div{
-    padding:10px;
+:host{
+    display: block;
+}
 
-    position: relative;
-    float:left;
+.open-close{
+    margin-top:20px;
+    padding:10px;
+    border:red solid 1px;
+}
+button{
+    margin-top:20px;
 }

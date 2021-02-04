@@ -1,20 +1,20 @@
-import { Component, OnInit } from '@angular/core';
-import { trigger, state, style, animate, transition } from '@angular/animations';
+import { Component } from '@angular/core';
+import { trigger, transition, state, animate, style } from '@angular/animations';
 
 @Component({
   selector: 'app-red',
-  templateUrl: './red.component.html',
-  styleUrls: ['./red.component.css'],
-  animations: [
-    trigger('openClose', [
+animations: [
+    trigger('openRed', [
       state('open', style({
-        height: '200px',
-        opacity:1,
+        height: '1000px',
+        width:'100%',
+        opacity: 1,
         backgroundColor: 'red'
       })),
       state('closed', style({
-        height: '100px',
-        opacity:0.5,
+        height: '200px',
+        width:'200px',
+        opacity: 1,
         backgroundColor: 'yellow'
       })),
       transition('open => closed', [
@@ -24,10 +24,12 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
         animate('0.5s')
       ]),
     ]),
-  ]
+  ],
+  templateUrl: './red.component.html',
+  styleUrls: ['./red.component.css']
 })
 export class RedComponent{
-isOpen=true;
+isOpen = true;
 
 toggle(){
   this.isOpen=!this.isOpen;
