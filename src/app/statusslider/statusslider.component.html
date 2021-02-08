@@ -1,0 +1,6 @@
+<nav>
+    <button (click)="toggle()">status</button>
+</nav>
+<div [@slideStatus]="status" class="box">
+    {{status == 'active' ? 'Active' : 'Inactive'}}
+</div> 

@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { RedComponent } from './red/red.component';
 import { YellowComponent } from './yellow/yellow.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { StatussliderComponent } from './statusslider/statusslider.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RedComponent,
     YellowComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    StatussliderComponent
   ],
   imports: [
     BrowserModule,
