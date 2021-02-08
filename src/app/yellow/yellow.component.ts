@@ -7,12 +7,12 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
     trigger('openYellow', [
       state('open', style({
         height: '200px',
-        opacity: 1,
+        width:'1200px',
         backgroundColor: 'yellow'
       })),
       state('closed', style({
         height: '100px',
-        opacity: 0.5,
+        width:'100px',
         backgroundColor: 'green'
       })),
       transition('open => closed', [
@@ -26,7 +26,6 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
   templateUrl: './yellow.component.html',
   styleUrls: ['./yellow.component.css']
 })
-
 export class YellowComponent{
   isOpen=true;
 
