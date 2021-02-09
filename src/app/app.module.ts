@@ -8,6 +8,7 @@ import { RedComponent } from './red/red.component';
 import { YellowComponent } from './yellow/yellow.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { StatussliderComponent } from './statusslider/statusslider.component';
+import { FlyInOutComponent } from './fly-in-out/fly-in-out.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { StatussliderComponent } from './statusslider/statusslider.component';
     RedComponent,
     YellowComponent,
     PagenotfoundComponent,
-    StatussliderComponent
+    StatussliderComponent,
+    FlyInOutComponent
   ],
   imports: [
     BrowserModule,
