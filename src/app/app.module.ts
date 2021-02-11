@@ -9,6 +9,7 @@ import { YellowComponent } from './yellow/yellow.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { StatussliderComponent } from './statusslider/statusslider.component';
 import { FlyInOutComponent } from './fly-in-out/fly-in-out.component';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FlyInOutComponent } from './fly-in-out/fly-in-out.component';
     YellowComponent,
     PagenotfoundComponent,
     StatussliderComponent,
-    FlyInOutComponent
+    FlyInOutComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
