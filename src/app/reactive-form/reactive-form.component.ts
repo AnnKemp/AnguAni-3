@@ -13,7 +13,7 @@ username =  new FormControl('');
 password = new FormControl('');
 
 updatePassword() {
-  this.password.setValue('Sesam open U!')
+  this.password.setValue('Sesam open U!');
 }
-
+// maar hoe ik nu deze values moet doorgeven aan een server, waarschijnlijk met getValue maar dan . . . wegschrijven naar een API lijkt me al erg logisch, dat moet ik nog uitzoeken . . .
 }

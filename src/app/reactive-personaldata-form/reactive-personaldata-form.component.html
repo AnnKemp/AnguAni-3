@@ -1,1 +1,24 @@
-<p>reactive-personaldata-form works!</p>
+<h3>Fill in your personal data here:</h3>
+<form [formGroup]="dataForm" (ngSubmit)="onSubmit()">
+    <label>
+        First Name:</label><br />
+        <input type="text" formControlName="firstName" required><br />
+    
+    <label>
+        Last Name: </label><br />
+        <input type="text" formControlName="lastName" required><br /><br />
+   
+    <div formGroupName="address">
+        <h3>Address</h3> 
+        <label>Street: </label><br />
+        <input type="text" formControlName="street"><br />
+        <label>City: </label><br />
+            <input type="text" formControlName="city"><br />
+       
+        <label>State:</label><br />
+        <input type="text" formControlName="state"><br />
+        <label>Zip Code:</label><br />
+        <input type="text" formControlName="zip"><br />
+    </div>
+
+</form>

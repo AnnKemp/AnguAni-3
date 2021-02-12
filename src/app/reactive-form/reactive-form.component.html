@@ -1,15 +1,17 @@
 
 <h1>Reactive Logon</h1>
 <label>
-    Name:
-    <input type="text" [formControl]="username">
-</label>
+    Name:<br />
+    <input type="text" [formControl]="username"></label>
 <br/>
 <label>
-    Password:
-    <input type="password" [formControl]="password">
-</label>
+    Password:<br />
+    <input type="password" [formControl]="password"></label>
+    <br />
 <p>
     Username: {{ username.value }} & Password: {{ password.value }}
 </p>
 <button (click)="updatePassword()">Show the real password</button>
+<hr />
+
+<app-reactive-personaldata-form></app-reactive-personaldata-form>
