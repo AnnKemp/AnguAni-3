@@ -9,6 +9,7 @@
     <input type="password" [formControl]="password"></label>
     <br />
 <p>
+    <!-- display the current value using interpolation in the template -->
     Username: {{ username.value }} & Password: {{ password.value }}
 </p>
 <button (click)="updatePassword()">Show the real password</button>
