@@ -20,7 +20,7 @@
         <label>Zip Code:</label><br />
         <input type="text" formControlName="zip"><br />
     </div>
-    <button type="submit" [disabled]="!dataFrom.valid">Send</button>
+    <button type="submit" [disabled]="!dataForm.valid">Send</button>
     <button type="reset">Reset</button>
 </form>
 <p>Form value's: {{ dataForm.value | json }}</p>
