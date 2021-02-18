@@ -32,6 +32,7 @@ export class ReactivePersonaldataFormComponent {
 addAlias(){ // dynamically insert an alias control into the alias's form array
   this.aliases.push(this.fb.control('')); // the FormArray.push() method inserts the control as a new item in the array
 } // in the template, each control is displayed as a separate input field
+// nu nog uitzoeken hoe ik elk input veld een aparte 'name' kan geven, ook een toepassing zou interessant zijn
 
  constructor(private fb: FormBuilder){}
 
