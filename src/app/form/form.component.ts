@@ -8,9 +8,14 @@ import { NgForm } from '@angular/forms'; /* om de form te */
 })
 export class FormComponent{
 
-  constructor() { }
+secrets=['Your first Pet?', 'Your favorite teacher?']; // hier zit nog iets mis mee :veranderen!
+username="Please, enter your username"; // hier zit nog iets mis mee: veranderen! moet var of eigenschap zijn, heb this. al geprobeert maar pakt niet ....
 
-  onSubmit(form: NgForm){
+  submitted = false; 
+
+  onSubmit(){
+    this.submitted = true; // om de form te verstoppen
+
     //console.log('Submitted!'); // to test if it works! Calling the onSubmit method from the form by clicking the submit button (F12)
     //console.log(form); in combinatie met onSubmit(form: NgForm)
   }

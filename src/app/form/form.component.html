@@ -1,13 +1,16 @@
 <div class="container">
 <div class="row">
-<div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
-    <h1>not a reactive form</h1>
+<div [hidden]="submitted" class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+    <h1>not a reactive form but a template form</h1>
 <p>Please add the following data:</p>
-<form (ngSubmit)="onSubmit(f)" #f="ngForm"><!--#f="ngForm", f is een referentie naar ngForm en dat is het javaScript object dat Angular van het formulier maakt -->
+<form (ngSubmit)="onSubmit()" #f="ngForm"><!--#f="ngForm", f is een referentie naar ngForm en dat is het javaScript object dat Angular van het formulier maakt -->
     <div id="user-data"> 
         <div class="form-group">
             <label for="username">Username</label>
-            <input type="text" name="username" id="username" class="form-control" ngModel>
+            <input type="text" name="username" id="username" class="form-control" required [(ngModel)]="username" #username="ngModel">
+        </div>
+        <div [hidden]="username.valid || username.pristine" class="alert alert-danger">
+            Username is required
         </div>
         <div class="form-group">
             <label for="email">Mail</label>
@@ -15,14 +18,23 @@
         </div>
         <div class="form-group">
             <label for="secret">Secret Question</label>
-            <select id="secret" class="form-control" ngModel name="secret">
-                <option value="pet">Your first Pet?</option>
-                <option value="teacher">Your favorite teacher?</option>
+            <select id="secret" class="form-control" [(ngModel)]="secret" name="secret" required #secret="ngModel">
+                <option *ngFor="let secret of secrets" value="secret">{{secret}}</option>
             </select>
         </div>
 </div>
-    <button type="submit" class="btn btn-primary">Save</button>
+    <button type="submit" class="btn btn-succes" [disabled]="!f.form.valid">Save</button>
 </form>
+</div>
+<div [hidden]="!submitted">
+    <h2>You submitted the following:</h2>
+    <div class="col-xs-3">Username</div>
+    <div class="col-xs-9">{{ username }}</div><br/>
+    <div class="col-xs-3">Email</div>
+    <div class="col-xs-9">{{ email }}</div><br/>
+    <div class="col-xs-3">Secret</div>
+    <div class="col-xs-9">{{ secret }}</div><br/>
+    <button class="btn btn-primary" (click)="submitted=false">Edit</button>
 </div>
 </div>
 </div>
