@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder } from '@angular/forms'; // service: import via constructor
 import { Validators } from '@angular/forms';
-import { FormArray } from '@angular/forms'; // gebruik ik nog niet
+import { FormArray } from '@angular/forms'; // for dynamic forms, with unknown controls:(form children)
 
 @Component({
   selector: 'app-reactive-personaldata-form',
@@ -20,14 +20,17 @@ export class ReactivePersonaldataFormComponent {
       city:[''],
       state:[''],
       zip:['']
-    })
+    }),
+    aliases: this.fb.array([ // add via the aliases the form array with unknown controls, from zero till ...     
+      this.fb.control('') // the aliases control in the form group instance is now populated with a single control until more controls are added dynamically
+      ])
   });
 
  constructor(private fb: FormBuilder){}
 
  onSubmit(){
    // to do: use EventEmitter to keep the form encapsulated and to provide the form value outside the component
-    console.warn(this.dataForm.value); // to log a message to the browser console
+    console.warn(this.dataForm.value); // to log the form values to the browser console
  }
 
 }
