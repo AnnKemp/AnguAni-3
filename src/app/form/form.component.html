@@ -7,14 +7,14 @@
     <div id="user-data"> 
         <div class="form-group">
             <label for="username">Username</label>
-            <input type="text" name="username" id="username" class="form-control" required>
+            <input type="text" name="username" id="username" class="form-control" ngModel required>
         </div>
         <div [hidden]="username.valid || username.pristine" class="alert alert-danger">
             Username is required
         </div>
         <div class="form-group">
             <label for="email">Mail</label>
-            <input type="email" name="email" id="email" class="form-control" required>
+            <input type="email" name="email" id="email" class="form-control" ngModel  required>
         </div>
         <div class="form-group">
             <label for="secret">Secret Question</label>
@@ -23,6 +23,7 @@
             </select>
         </div>
 </div>
+<!-- onclick moet ik de inhoud van de form naar een variabele in .ts sturen om hieronder de gegevens daar uit te halen-->
     <button type="submit" class="btn btn-succes" [disabled]="!f.form.valid">Save</button>
 </form>
 </div>
