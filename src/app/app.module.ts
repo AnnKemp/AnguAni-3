@@ -4,7 +4,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+ 
+
 
 import { AppComponent } from './app.component';
 import { RedComponent } from './red/red.component';
@@ -33,8 +34,8 @@ import { ReactivePersonaldataFormComponent } from './reactive-personaldata-form/
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
-    ReactiveFormsModule,
-    HttpModule
+    ReactiveFormsModule
+ 
   ],
   providers: [],
   bootstrap: [AppComponent]
