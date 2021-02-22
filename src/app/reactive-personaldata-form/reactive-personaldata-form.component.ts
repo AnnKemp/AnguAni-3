@@ -38,7 +38,8 @@ addAlias(){ // dynamically insert an alias control into the alias's form array
 
  onSubmit(){
    // to do: use EventEmitter to keep the form encapsulated and to provide the form value outside the component
-    console.warn(this.dataForm.value); // to log the form values to the browser console
+    // should go almost automaticly
+   console.warn(this.dataForm.value); // to log the form values to the browser console
  }
 
 }

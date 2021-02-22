@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { Validators } from '@angular/forms'; // voorlopig nog niet in gebruik
 
 @Component({
   selector: 'app-reactive-form',
