@@ -1,17 +1,23 @@
 <h2>try-out template-form</h2>
     <h4>Pass value to an event handler</h4>
     <input #phone placeholder="phone number"/>
-    <button (click)="callPhone(phone.value)">Call</button>
+    <button (click)="callPhone(phone.value)" class="btn btn-secondary">Call</button>
     <p>Your number is: {{ phone.value }}</p>
     <p>Your number is: {{ telefoonnummer }}</p>
- <!--
+ 
+    <hr />
+    <h4>Use NgForm with template variables</h4>
 <form #itemForm="ngForm" (ngSubmit)="onSubmit(itemForm)">
     <label for="name">
         Name<input class="form-control" name="name" ngModel required />
+    </label><br />
+    <label for="surname">
+        Surname<input class="form-control" name="surname" ngModel required />
     </label>
-    <button type="submit">Verzend</button>
+    <button type="submit" class="btn btn-secondary">Verzend</button>
 </form>
 
 <div [hidden]="!itemForm.form.valid">
-    <p>{{ submitMessage}}</p>
-</div> -->
+    <p>{{ submitMessage }}</p>
+</div> 
+<p>JSON: {{ itemForm.form.value | json }}</p>

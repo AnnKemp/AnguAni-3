@@ -16,8 +16,15 @@ public telefoonnummer;
     //console.log(this.telefoonnummer);  // voordat ik return gebruikte om te testen
   }
 //----------------------------------- einde oefening 1 -------------------------//
-  constructor() { }
+ //----------------------------------- begin oefening 2 ------------------------//
 
-  
+ private _submitMessage = '';
 
+ get submitMessage(){ // door het gebruik van get en dan de return krijg je geen foutmeldingen op de private _submitMessage
+   return this._submitMessage;
+ }
+
+onSubmit(form: NgForm){
+   this._submitMessage = 'Form value is: ' + JSON.stringify(form.value);
+ }
 }
