@@ -1,0 +1,17 @@
+<h2>try-out template-form</h2>
+    <h4>Pass value to an event handler</h4>
+    <input #phone placeholder="phone number"/>
+    <button (click)="callPhone(phone.value)">Call</button>
+    <p>Your number is: {{ phone.value }}</p>
+    <p>Your number is: {{ telefoonnummer }}</p>
+ <!--
+<form #itemForm="ngForm" (ngSubmit)="onSubmit(itemForm)">
+    <label for="name">
+        Name<input class="form-control" name="name" ngModel required />
+    </label>
+    <button type="submit">Verzend</button>
+</form>
+
+<div [hidden]="!itemForm.form.valid">
+    <p>{{ submitMessage}}</p>
+</div> -->

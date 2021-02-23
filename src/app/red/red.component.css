@@ -1,5 +1,6 @@
 :host{
    display: block;
+   margin-left:25px;
 }
 
 .open-close{
@@ -9,4 +10,7 @@
 }
 button{
     margin-top:20px;
+}
+hr{
+    border-top: 3px dashed green;
 }

@@ -16,6 +16,7 @@ import { FlyInOutComponent } from './fly-in-out/fly-in-out.component';
 import { FormComponent } from './form/form.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { ReactivePersonaldataFormComponent } from './reactive-personaldata-form/reactive-personaldata-form.component';
+import { TemplateObjectComponent } from './template-object/template-object.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ReactivePersonaldataFormComponent } from './reactive-personaldata-form/
     FlyInOutComponent,
     FormComponent,
     ReactiveFormComponent,
-    ReactivePersonaldataFormComponent
+    ReactivePersonaldataFormComponent,
+    TemplateObjectComponent
   ],
   imports: [
     BrowserModule,
