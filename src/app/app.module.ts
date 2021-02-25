@@ -17,6 +17,7 @@ import { FormComponent } from './form/form.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { ReactivePersonaldataFormComponent } from './reactive-personaldata-form/reactive-personaldata-form.component';
 import { TemplateObjectComponent } from './template-object/template-object.component';
+import { HeroFormComponent } from './hero-form/hero-form.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { TemplateObjectComponent } from './template-object/template-object.compo
     FormComponent,
     ReactiveFormComponent,
     ReactivePersonaldataFormComponent,
-    TemplateObjectComponent
+    TemplateObjectComponent,
+    HeroFormComponent
   ],
   imports: [
     BrowserModule,
