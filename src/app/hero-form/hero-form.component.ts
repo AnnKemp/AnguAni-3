@@ -19,6 +19,8 @@ submitted = false; // when form not send
   // todo: remove this when we're done
   get diagnostic() { return JSON.stringify(this.model); } // nog uitzoeken wat diagnostic is
 
+  // const myHero nog toevoegen + code
+  
   newHero(){
     this.model = new Hero(42, '', '');
   }
