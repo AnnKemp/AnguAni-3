@@ -13,11 +13,11 @@ skills = ['Angular', 'React', 'PHP', 'C#'];
 
 model = new Hero(52, 'Dr. IQ', this.skills[0], 'Front-end Developer');
 
-submitted = false; // wanneer form niet verstuurd
+submitted = false; // when form not send
  
- onSubmit(){this.submitted = true}; // wanneer form verstuurd
+ onSubmit(){this.submitted = true}; // when form send
   // todo: remove this when we're done
-  get diagnostic() { return JSON.stringify(this.model); } 
+  get diagnostic() { return JSON.stringify(this.model); } // nog uitzoeken wat diagnostic is
 
   newHero(){
     this.model = new Hero(42, '', '');
