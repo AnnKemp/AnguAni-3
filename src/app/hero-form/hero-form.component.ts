@@ -1,3 +1,4 @@
+
 import { Component } from '@angular/core';
 import { Hero } from '../hero';
 
@@ -10,15 +11,7 @@ export class HeroFormComponent {
 
 skills = ['Angular', 'React', 'PHP', 'C#'];
 
-model = new Hero(52, 'unemployed, this.skills[0], 'Front-end Developer');
-
-// the following code creates a new hero instance, so that the initial form can show an example hero
-const myHero = new Hero( 42, 'couchHero',
-'CSS-specialist',
-'Old-school-Webdesigner'
-);
-console.log('My hero is called ' + myHero.name); 
-
+model = new Hero(52, 'Dr. IQ', this.skills[0], 'Front-end Developer');
 
 submitted = false; // wanneer form niet verstuurd
  
@@ -26,4 +19,8 @@ submitted = false; // wanneer form niet verstuurd
   // todo: remove this when we're done
   get diagnostic() { return JSON.stringify(this.model); } 
 
+  newHero(){
+    this.model = new Hero(42, '', '');
+  }
+ 
 }
