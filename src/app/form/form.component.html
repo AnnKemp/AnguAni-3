@@ -1,43 +1,5 @@
-<div class="container">
-<div class="row">
-<div [hidden]="submitted" class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
-    <h1>not a reactive form but a template form</h1>
-<p>Please add the following data:</p>
-<form (ngSubmit)="onSubmit(f)" #f="ngForm"><!--#f="ngForm", f is een referentie naar ngForm en dat is het javaScript object dat Angular van het formulier maakt -->
-    <div id="user-data"> 
-        <div class="form-group">
-            <label for="username">Username</label>
-            <input type="text" name="username" id="username" class="form-control" placeholder="username" #username required>
-        </div>
-        <!--<div [hidden]="username.valid || username.pristine" class="alert alert-danger">
-            Username is required   die pristine en valid nog even checken, geven foutmeldingen
-        </div>-->
-        <div class="form-group">
-            <label for="email">Mail</label>
-            <input type="email" name="email" id="email" class="form-control" placeholder="email" #email required>
-        </div>
-        <div class="form-group">
-           <!-- <label for="secret">Secret Question</label>
-            <select id="secret" class="form-control" [(ngModel)]="secret" name="secret" required #secret="ngModel">
-                <option *ngFor="let secret of secrets" value="secret">{{secret}}</option> hier slaat ie tilt op de [(ngModel)] nog even checken
-            </select>-->
-        </div>
-</div>
-<!-- onclick moet ik de inhoud van de form naar een variabele in .ts sturen om hieronder de gegevens daar uit te halen-->
-    <button type="submit" class="btn btn-succes" [disabled]="!f.form.valid">Save</button>
-</form>
-</div>
-<div [hidden]="!submitted">
-    <!-- hier moet ik nog aanduiden van welk object ik de username moet nemen en hetzelfde voor email
-    <h2>You submitted the following:</h2>
-    <div class="col-xs-3">Username</div>
-    <div class="col-xs-9">{{ f.form.username.value }}</div><br/>
-    <div class="col-xs-3">Email</div>
-    <div class="col-xs-9">{{ email }}</div><br/>
-    <div class="col-xs-3">Secret</div>
-    <div class="col-xs-9">{{ secret }}</div><br/>
-    <button class="btn btn-primary" (click)="submitted=false">Edit</button>
--->
-</div>
-</div>
-</div>
+<button type="button" class="btn btn-primary" id="hide">Hide</button>
+<button type="button" class="btn btn-primary" id="show">Show</button>
+
+<p id="tekst">Als dit werkt verbergt jQuery de tekst wanneer je op de hide-button klikt</p>
+ 

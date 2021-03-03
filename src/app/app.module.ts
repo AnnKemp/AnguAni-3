@@ -16,6 +16,7 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { ReactivePersonaldataFormComponent } from './reactive-personaldata-form/reactive-personaldata-form.component';
 import { TemplateObjectComponent } from './template-object/template-object.component';
 import { HeroFormComponent } from './hero-form/hero-form.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { HeroFormComponent } from './hero-form/hero-form.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbModule
  
   ],
   providers: [],
