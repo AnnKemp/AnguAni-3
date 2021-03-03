@@ -1,6 +1,27 @@
 .cross-validation-error input{
     border-left: 5px solid red;
 }
-button, p{
-    margin: 10px 20px;
+#flip{
+    margin-top: 20px;
+    color:white;
+    text-shadow: 1px 1px 1px gray;
+    background-color:crimson;
+    border: solid 1px crimson;
 }
+ #panel, #flip{
+     margin-left:20px;
+     padding:5px;
+     width: 700px;
+     text-align: center;
+     font-weight: bold;
+ }
+
+ #panel{
+     padding:50px;
+     display:none;
+     background-color: aliceblue; 
+     border-bottom: 1px solid gray;
+     border-left: 1px solid gray;
+     border-right:1px solid gray;
+     box-shadow: 10px 10px 5px #aaaaaa;
+ }

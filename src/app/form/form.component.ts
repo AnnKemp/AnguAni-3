@@ -14,12 +14,10 @@ export class FormComponent implements OnInit{
 ngOnInit(){ // jQuery kan niet werken zonder de ngOnInit() is i.p.v. $(document).ready in jQuery
   // hier schrijf je de jQuery in de OnInit()
 
-  $('#hide').click(function(){
-    $("#tekst").hide();
+  $('#flip').click(function(){
+    $("#panel").slideToggle("slow");
    }); 
-   $('#show').click(function(){
-    $("#tekst").show();
-   }); 
+  
 
 // je moet wel hier bovenaan de $ als variabele declareren anders krijg je foutmeldingen hierop
 
