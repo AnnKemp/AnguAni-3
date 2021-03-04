@@ -13,6 +13,19 @@ export class ReactiveFormComponent {
 username =  new FormControl('');
 password = new FormControl('');
 
+// this property is for the onKeyUp event
+values=''; // to catch the username
+
+// ***** the first method works fine ***
+//onKey(event:any){ // without type info, you catch the event
+//this.values=event.target.value;
+//}
+
+// **** but it's better to use this: ****
+onKey(event: KeyboardEvent){ // with type info
+  this.values +=(event.target as HTMLInputElement).value + ' | ';
+} // nu werkt de functie updatePassword niet meer sinds ik met die events begonnen ben ... mm
+
 // je zou ook de 'valueChanges' observable kunnen gebruiken om de waarde weer te geven, je luistert voor veranderingen in de ingevulde waarden in het formulier en maakt hiervoor gebruik van de 'AsyncPipe' of in de component class gebruik je de subscribe() method
 updatePassword() {
   this.password.setValue('Sesam open U!');

@@ -3,3 +3,6 @@
     flex-direction: column;
     padding-left: 30px;
 }
+button{
+    width: 15%;
+}
