@@ -1,6 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 
-// om de jQuery te laten werken anders geeft iAngular foutmeldingen op het '$'-teken
+// om de jQuery te laten werken anders geeft Angular foutmeldingen op het '$'-teken
 declare var $: any;
 @Component({
   selector: 'app-form',

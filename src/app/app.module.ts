@@ -17,6 +17,7 @@ import { ReactivePersonaldataFormComponent } from './reactive-personaldata-form/
 import { TemplateObjectComponent } from './template-object/template-object.component';
 import { HeroFormComponent } from './hero-form/hero-form.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ExpEventsComponent } from './exp-events/exp-events.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ReactiveFormComponent,
     ReactivePersonaldataFormComponent,
     TemplateObjectComponent,
-    HeroFormComponent
+    HeroFormComponent,
+    ExpEventsComponent
   ],
   imports: [
     BrowserModule,

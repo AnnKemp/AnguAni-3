@@ -2,21 +2,20 @@
 <h1>Reactive Logon</h1>
 <label>
     Name:<br />
-    <input type="text" [formControl]="username" (keyup)="onKey($event)"></label>
+    <input type="text" [formControl]="username"></label>
 <br/>
-<p>OnKeyUp-event:
-{{ values }}</p>
+<p>Value: {{ username.value }}</p>
 <label>
     Password:<br />
-    <input type="password" [formControl]="password" #password (keyup)="0"></label>
-    <br /><!--The template reference variable named #password, declared in the <input> element, refers to the input-element itself. The code uses the box variable to get the input element's value and display it with interpolation between the <p>-tags. The template is complete self-contained. It doesn't bind to the component, and the component does nothing. Type something in the input box, and watch the display update with each keystroke. -->
-    <p>{{ password.value }}</p>
+    <input type="password" [formControl]="password"></label>
+    <br /> 
+        <p>{{ password.value }}</p>
 <p>
     <!-- display the current value using interpolation in the template -->
     Username: {{ username.value }} & Password: {{ password.value }}
 </p>
-Deze knop werkt even niet meer nadat ik event-gebonden onKeyUps aan het formulier heb toegevoegd.
-<button (click)="updatePassword()" class="btn btn-warning">Show the real password</button>
+ 
+ <button (click)="updatePassword()" class="btn btn-warning">Show the real password</button>
 <hr />
 
 <app-reactive-personaldata-form></app-reactive-personaldata-form>

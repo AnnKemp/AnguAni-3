@@ -3,7 +3,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 
 @Component({
   selector: 'app-fly-in-out',
-  template: `<div [@flyInOut]="'in'" (click)="out()">Fly-in by page change and out on click (or on page change I still have to find/try out)</div>`,
+  template: `<div [@flyInOut]="'in'" (click)="out()">Fly-in by page change and out on click (or on page change I still have to find/try out)</div><app-exp-events></app-exp-events>`,
   styleUrls: ['./fly-in-out.component.css'],
   animations: [
     trigger('flyInOut', [
